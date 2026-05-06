@@ -16,10 +16,24 @@ if ($databaseUrl !== '') {
     $port = (int) (getenv('DB_PORT') ?: 8889);
 }
 
-$conn = new mysqli($host, $user, $pass, $db, $port);
+function show_database_connection_error(string $message): void
+{
+    http_response_code(500);
+    echo '<h1>Database connection error</h1>';
+    echo '<p>Please check the MySQL environment variables in Render.</p>';
+    echo '<p>' . htmlspecialchars($message, ENT_QUOTES, 'UTF-8') . '</p>';
+    exit();
+}
+
+if (str_starts_with($host, 'your_') || str_starts_with($user, 'your_')) {
+    show_database_connection_error('DB_HOST and DB_USER must be replaced with real MySQL credentials.');
+}
+
+mysqli_report(MYSQLI_REPORT_OFF);
+$conn = @new mysqli($host, $user, $pass, $db, $port);
 
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    show_database_connection_error($conn->connect_error);
 }
 
 if (!function_exists('create_pdo_connection')) {
