@@ -17,13 +17,13 @@ Verified locally:
 Local public URL:
 
 ```text
-http://127.0.0.1:8001/frontend/index.php
+[http://127.0.0.1:8001/frontend/index.php](https://blog-management-system-yhn9.onrender.com)
 ```
 
 Admin login URL:
 
 ```text
-http://127.0.0.1:8001/backend/login.php
+[http://127.0.0.1:8001/backend/login.php](https://blog-management-system-yhn9.onrender.com/backend/admin.php)
 ```
 
 ## Features
