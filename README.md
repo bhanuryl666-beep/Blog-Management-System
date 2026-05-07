@@ -264,4 +264,4 @@ curl -s "http://127.0.0.1:8001/frontend/index.php?ajax=1&category=latest-jobs"
 
 ## Author
 
-Bhanu
+Banu Prakash Chari
