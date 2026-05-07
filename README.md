@@ -6,7 +6,7 @@ This is a PHP and MySQL blog management system built for the JobYaari Developer 
 
 The website is ready.
 
-Verified locally:
+Verified :
 
 - Public blog listing page returns `200 OK`
 - Blog detail page returns `200 OK`
@@ -14,7 +14,7 @@ Verified locally:
 - AJAX category filtering returns blog results without a page reload
 - PHP syntax checks pass for the main public and admin files
 
-Local public URL:
+Public URL:
 
 ```text
 [http://127.0.0.1:8001/frontend/index.php](https://blog-management-system-yhn9.onrender.com)
@@ -100,7 +100,6 @@ The create and edit blog pages include a rich editor with:
 - jQuery
 - AJAX
 - Font Awesome
-- MAMP local server
 
 ## Project Structure
 
@@ -188,36 +187,6 @@ CREATE TABLE users (
 ```
 
 To create an admin account, insert a user with `role = 'admin'` and a PHP `password_hash()` value in the `password` column.
-
-## Setup Instructions
-
-1. Place the project folder in MAMP's `htdocs` directory:
-
-```text
-/Applications/MAMP/htdocs/myproject
-```
-
-2. Start MAMP and make sure MySQL is running on port `8889`.
-
-3. Create the `blog` database and the required tables.
-
-4. Run the PHP development server from the project root:
-
-```bash
-/Applications/MAMP/bin/php/php8.4.17/bin/php -S 127.0.0.1:8001 -t /Applications/MAMP/htdocs/myproject
-```
-
-5. Open the public website:
-
-```text
-http://127.0.0.1:8001/frontend/index.php
-```
-
-6. Open the admin login:
-
-```text
-http://127.0.0.1:8001/backend/login.php
-```
 
 ## Main Files
 
